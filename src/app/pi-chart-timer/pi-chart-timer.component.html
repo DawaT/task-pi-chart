@@ -1,0 +1,39 @@
+<div class="daily">
+  <div class="daily-time">
+    <svg width="100%" height="100%" viewBox="0 0 70 70" class="donut">
+      <circle cx="35" cy="35" r="15.91549430918954" fill="#DDDCDE" stroke="#DDDCDE" stroke-width="30"></circle>
+      <ng-container *ngFor="let dailyTask of clockDailyTasks">
+        <!--            [attr.stroke]="dailyTask.color"-->
+        <circle [attr.stroke]="dailyTask.color" cx="35" cy="35" r="15.91549430918954" fill="transparent"
+                stroke-width="30"
+                [attr.stroke-dasharray]="timeValue(getTimeDiff(dailyTask.startTime, dailyTask.endTime))+' '+(100 - timeValue(getTimeDiff(dailyTask.startTime, dailyTask.endTime)))"
+                [attr.stroke-dashoffset]="-(timeValue((dailyTask.startTime)))"></circle>
+      </ng-container>
+      <circle cx="35" cy="35" r="15.91549430918954" fill="transparent" stroke="#FAFAFA"
+              stroke-width="30" stroke-dasharray="0.05 2.7277777778" stroke-dashoffset="0"></circle>
+      <circle cx="35" cy="35" r="15.91549430918954" fill="transparent" stroke="#FFFFFF"
+              stroke-width="30" stroke-dasharray="0.1666666667 8.1666666667" stroke-dashoffset="0"></circle>
+      <circle cx="35" cy="35" r="8" fill="#FFFFFF"></circle>
+      <g transform="translate(70, 0) rotate(90)">
+        <text x="1%" y="51.5%" style="font-size: 3.5px">9</text>
+        <text x="96%" y="52%" style="font-size: 3.5px">3</text>
+        <text x="47%" y="4.5%" style="font-size: 3.5px">12</text>
+        <text x="48%" y="99%" style="font-size: 3.5px">6</text>
+        <text x="73%" y="11%" style="font-size: 3.5px">1</text>
+        <text x="90%" y="29%" style="font-size: 3.5px">2</text>
+        <text x="24%" y="11%" style="font-size: 3.5px">11</text>
+        <text x="6.2%" y="28.7%" style="font-size: 3.5px">10</text>
+        <text x="25%" y="93%" style="font-size: 3.5px">7</text>
+        <text x="7%" y="75%" style="font-size: 3.5px">8</text>
+        <text x="72%" y="93%" style="font-size: 3.5px">5</text>
+        <text x="89%" y="75%" style="font-size: 3.5px">4</text>
+      </g>
+    </svg>
+    <svg width="100%" height="100%" viewBox="0 0 200 200" class="daily-clock">
+      <circle cx="100" cy="100" r="1" fill="none" stroke="black" stroke-width="2" />
+      <line x1="100" y1="100" x2="100" y2="20" stroke="black" stroke-width="2" [attr.transform]="'rotate(' + hourHandAngle + ' 100 100)'"/>
+      <line x1="100" y1="100" x2="100" y2="15" stroke="black" stroke-width="1.5" [attr.transform]="'rotate(' + minuteHandAngle + ' 100 100)'"/>
+      <line x1="100" y1="100" x2="100" y2="12" stroke="black" stroke-width="1" [attr.transform]="'rotate(' + secondHandAngle + ' 100 100)'"/>
+    </svg>
+  </div>
+</div>

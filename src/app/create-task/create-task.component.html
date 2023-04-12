@@ -1,0 +1,19 @@
+<div class="create-task">
+  <form [formGroup]="taskForm" class="create-task-form">
+    <h4>Add task for today</h4>
+
+    <label for="task-name-input">Task Name:</label>
+    <input id="task-name-input" type="text" formControlName="name" placeholder="Task Name">
+    <br>
+    <label for="start-time-input">Start Time:</label>
+    <input id="start-time-input" type="time" formControlName="startTime">
+    <br>
+    <label for="end-time-input">End Time:</label>
+    <input id="end-time-input" type="time" formControlName="endTime">
+    <br>
+    <label for="color-input">Pick Task Color</label>
+    <input id="color-input" type="color" formControlName="color">
+    <br>
+    <button (click)="onSubmit()">Add Task</button>
+  </form>
+</div>
