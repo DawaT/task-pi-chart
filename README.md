@@ -26,4 +26,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # task-pi-chart
-# tasks-pi-chart
+![image](https://user-images.githubusercontent.com/49987380/231747035-0ff5615d-0e13-4d0a-963e-c377ec5a37f0.png)
+
