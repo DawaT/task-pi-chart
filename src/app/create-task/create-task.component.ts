@@ -21,13 +21,10 @@ export class CreateTaskComponent implements OnInit {
   }
 
   onSubmit() {
-    const today = new Date();
-    const startDate = new Date(`${today.toDateString()} ${this.taskForm.value.startTime}`);
-    const endDate = new Date(`${today.toDateString()} ${this.taskForm.value.endTime}`);
     const task: Task = {
       name: this.taskForm.value.name,
-      startTime: startDate.toISOString(),
-      endTime: endDate.toISOString(),
+      startTime: this.taskForm.value.startTime,
+      endTime: this.taskForm.value.endTime,
       color: this.taskForm.value.color,
     };
     // Add the task to the task list in the service

@@ -6,10 +6,11 @@
     <input id="task-name-input" type="text" formControlName="name" placeholder="Task Name">
     <br>
     <label for="start-time-input">Start Time:</label>
-    <input id="start-time-input" type="time" formControlName="startTime">
+    <input type="datetime-local" id="start-time-input" name="startDateTime" formControlName="startTime">
+
     <br>
     <label for="end-time-input">End Time:</label>
-    <input id="end-time-input" type="time" formControlName="endTime">
+    <input type="datetime-local" id="end-time-input" name="startDateTime" formControlName="endTime">
     <br>
     <label for="color-input">Pick Task Color</label>
     <input id="color-input" type="color" formControlName="color">

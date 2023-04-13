@@ -2,6 +2,6 @@
   <h4>Task listed for today</h4>
   <p class="task-list-hint" *ngIf="!tasks?.length">Seems no task has been added yet for today</p>
   <div *ngFor="let task of tasks">
-    <p><span [style.background]="task.color" style="padding: 4px; margin-right: 8px">&nbsp;</span> {{ task.name }}</p>
+    <p><span [style.background]="task.color" style="padding: 4px; margin-right: 8px">&nbsp;</span> {{ task.name }} <span [ngStyle]="{'color': task?.color}">({{task?.startTime | date: 'HH:mm'}} - {{task?.endTime | date: 'HH:mm'}})</span></p>
   </div>
 </div>
